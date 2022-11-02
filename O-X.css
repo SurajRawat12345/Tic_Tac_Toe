@@ -1,0 +1,177 @@
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing : border-box;
+    font-size: 20px;
+}
+:root{
+    --color1 : rgba(255, 0, 0, 0.839);
+    --color2 : rgb(0, 13, 255);
+    --color3 : rgb(247, 0, 255);
+    --color4 : rgba(255, 255, 0, 0.857);
+    --black : black;
+    --white : white;
+}
+.container{
+    width : 100vw;
+    height : 100vh;
+}
+
+/* ---------------- Nav Bar ------------------*/
+
+.navbar{
+    padding: 0.5rem 0rem;
+    display : flex;
+    margin-bottom : 2rem;
+    background-color: var(--black);
+    justify-content : space-between;
+}
+.logo{
+    margin-left : 1rem;
+    width : 3rem;
+    height : 2rem;
+}
+.logo2{
+    margin-right : 1rem;
+    width : 3rem;
+    height : 2rem;
+}
+.img_logo{
+    width : 3rem;
+    height : 2rem;
+}
+.heading{
+    font-size : 2rem;
+    font-weight : bolder;
+    color : var(--color3);
+}
+
+/* --------------- Main Web -----------------*/
+.main{
+    display : flex;
+    justify-content : space-evenly;
+}
+.whole1, .whole2{
+    color : white;
+    background-color : var(--color1);
+    border-radius : 1rem;
+}
+.whole2{
+    background-color: var(--color2);
+}
+.oo, .xx{
+    padding : 1rem;
+    padding-bottom : 0.5rem;
+    font-weight : bolder;
+    text-align : center;
+    font-size : 1.5rem;
+    border-bottom : 0.25rem solid black;
+}
+
+.o , .x{
+    font-weight : bolder;
+    text-align : center;
+    font-size : 2rem;
+    padding : 0.25rem 0rem;
+    margin-bottom : 0.75rem;
+}
+.gif1, .gif2 , .gif3{
+    width : 0rem;
+    margin-left: 0.5rem;
+    transition : width 0.5s;
+}
+/* --------------- For Game -----------------*/
+
+.tic{
+    display : flex;
+    justify-content : center;
+}
+.box{
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    font-size : 2rem;
+    margin : 0.1rem;
+    background-color: var(--color3);
+    width : 5rem;
+    height : 5rem;
+}
+/* ----------------- BUTTONS ----------------*/
+.buttons{
+    justify-content : center;
+    display : flex;
+    margin : auto;
+    margin-top : 1.5rem;
+    margin-bottom : 1.5rem;
+}
+.re ,.next{
+    font-size: 1rem;
+    width : 7.5rem;
+    height : 2rem;
+    margin : 0.1rem;
+    border-radius : 0.75rem;
+    border : 0.125rem solid var(--color3);
+    transition : transform 0.2s;
+    position : relative;
+    z-index : 1;
+}
+.next::before , .re::before{
+    content : "";
+    position : absolute;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    z-index : -1;
+    background-color: var(--color4);
+    transform : scaleX(0);
+    transform-origin : left;
+    transition : transform 0.75s;
+    border-radius : 0.75rem;
+}
+.next:hover::before , .re:hover::before{
+    transform : scaleX(1);
+}
+
+.re:hover , .next:hover{
+    transform : scale(1.1);
+    cursor: pointer;
+}
+.re:active , .next:active{
+    transform : scale(1);
+}
+/*---------------- footer ------------------*/
+
+.social{
+    padding : 0.25rem 0rem;
+    display : flex;
+    justify-content : space-evenly;
+    background-color: var(--black);
+}
+.foot{
+    font-size : 1.5rem;
+    font-weight : bold;
+    color : var(--color3);
+}
+.fa-brands{
+    color : var(--color3);
+    margin : 0.25rem;
+    font-size : 1.5rem;
+    transition : transform 0.2s;
+}
+.fa-facebook:hover{
+    color : white;
+    background-color : blue;
+}
+.fa-square-instagram:hover{
+    background: linear-gradient(yellow, blue);
+    color : rgb(255, 11, 52);
+}
+.fa-square-twitter:hover , .fa-linkedin:hover{
+    color: white;
+    background-color : rgb(75, 69, 254);
+}
+.fa-square-whatsapp:hover{
+    color : white;
+    background-color: rgb(0, 162, 0);
+}
