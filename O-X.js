@@ -6,12 +6,17 @@ scoreO = document.getElementById("o");
 scoreX = document.getElementById("x");
 let cntO = 0;
 let cntX = 0;
+const resBtn = document.getElementById("result-btn");
+let playScore = document.getElementById("players-score");
 gif_X = document.getElementById("gif1");
 gifi_X = document.getElementById("gifi1");
+gifig_X = document.getElementById("gifi4");
 gif_O = document.getElementById("gif2");
 gifi_O = document.getElementById("gifi2");
+gifig_O = document.getElementById("gifi5");
 gif_D = document.getElementById("gif3");
 gifi_D = document.getElementById("gifi3");
+gifig_D = document.getElementById("gifi6");
 let turn_audio = new Audio("Audio/click audio.wav");
 let win_audio = new Audio("Audio/Winner.wav");
 let draw_audio = new Audio("Audio/cartoon whistle.wav")
@@ -58,13 +63,16 @@ checkWin = () => {
                 scoreX.innerHTML = cntX;
                 gif_X.style.width = "7.5rem";
                 gifi_X.style.width = "7.5rem";
-                
+                gifig_X.style.width = "5rem";
+                resBtn.innerHTML = "X - Won";
             }
             else{
                 cntO++;
                 scoreO.innerHTML = cntO; 
                 gif_O.style.width = "7.5rem";
                 gifi_O.style.width = "7.5rem";
+                gifig_O.style.width = "5rem";
+                resBtn.innerHTML = "O - Won";
             }
         }
     })
@@ -87,13 +95,16 @@ reset.addEventListener('click', () => {
     })
     scoreX.innerHTML = cntX;
     scoreO.innerHTML = cntO;
+    resBtn.innerHTML = "Result"
     gif_X.style.width = "0rem";
     gifi_X.style.width = "0rem";
     gif_O.style.width = "0rem";
     gifi_O.style.width = "0rem";
     gif_D.style.width = "0rem";
     gifi_D.style.width = "0rem";
-
+    gifig_X.style.width = "0rem";
+    gifig_O.style.width = "0rem";
+    gifig_D.style.width = "0rem";
 })
 
 // Next Round Button
@@ -110,26 +121,32 @@ nextBtn.addEventListener('click', () => {
     })
     scoreX.innerHTML = cntX;
     scoreO.innerHTML = cntO;
+    resBtn.innerHTML = "Result";
     gif_X.style.width = "0rem";
     gifi_X.style.width = "0rem";
     gif_O.style.width = "0rem";
     gifi_O.style.width = "0rem";
     gif_D.style.width = "0rem";
     gifi_D.style.width = "0rem";
+    gifig_X.style.width = "0rem";
+    gifig_O.style.width = "0rem";
+    gifig_D.style.width = "0rem";
 })
 
 boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
-    element.addEventListener('click', () =>{
+    element.addEventListener('click', async() =>{
         if((element.innerText === "") && (gameOver == false) ){
             turn_audio.play();
             element.innerHTML = turn;
             turn = changeTurn();
             count++;
-            checkWin();
+            await checkWin();
             if(count == 9 && gif_X.style.width == "0rem" && gif_O.style.width == "0rem"){
                 gif_D.style.width = "7.5rem";
                 gifi_D.style.width = "7.5rem";
+                gifig_D.style.width = "5rem";
+                resBtn.innerHTML = " Draw ";
                 draw_audio.play();
             }
         }
