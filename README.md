@@ -1,9 +1,10 @@
 # Tic_Tac_Toe <img src="https://img.shields.io/badge/O-X-blue?labelColor=red">
+
+![2P_TIC_TAC_TOE](https://github.com/SurajRawat12345/Tic_Tac_Toe/assets/115080037/fa0c0d6d-7bf9-48ce-88a5-872d7acb9684)
+
 A simple Tic Tac Toe game using HTML, CSS and Javascript which is completely responsive. Enjoy this game Now 
 
 Live Link : https://surajrawat12345.github.io/Tic_Tac_Toe/
-
-![2P_TIC_TAC_TOE](https://github.com/SurajRawat12345/Tic_Tac_Toe/assets/115080037/fa0c0d6d-7bf9-48ce-88a5-872d7acb9684)
 
 # DEMO 
 ![tic-toc](https://github.com/SurajRawat12345/Tic_Tac_Toe/assets/115080037/e21ecf28-5928-45d2-85a3-8c4307a8cc5f)
