@@ -1,5 +1,5 @@
 # Tic_Tac_Toe <img src="https://img.shields.io/badge/O-X-blue?labelColor=red">
-A simple Tic Tac Toe game using HTML, CSS and Javascript
+A simple Tic Tac Toe game using HTML, CSS and Javascript which is completely responsive. Enjoy this game Now 
 
 Live Link : https://surajrawat12345.github.io/Tic_Tac_Toe/
 
